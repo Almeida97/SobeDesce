@@ -14,3 +14,6 @@ Little app to keep score for a card game called "Sobe e Desce"
 ## Adding Round Score Page
 <img width="307" alt="Captura de ecrã 2023-01-01, às 18 59 17" src="https://user-images.githubusercontent.com/105066938/210181888-f8f13a4e-59bf-4503-8e7a-e78393154253.png">
 
+## Ending round and inserting round points
+![](https://github.com/Almeida97/SobeDesce/blob/main/EndRound.gif)
+
