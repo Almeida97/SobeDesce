@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		910654522970AF7700CB6B70 /* CostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910654502970AF7700CB6B70 /* CostTableViewCell.swift */; };
+		910654532970AF7700CB6B70 /* CostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 910654512970AF7700CB6B70 /* CostTableViewCell.xib */; };
 		911AF7ED2953C66300EFF2B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911AF7EC2953C66300EFF2B6 /* AppDelegate.swift */; };
 		911AF7EF2953C66300EFF2B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911AF7EE2953C66300EFF2B6 /* SceneDelegate.swift */; };
 		911AF7F12953C66300EFF2B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911AF7F02953C66300EFF2B6 /* ViewController.swift */; };
@@ -14,9 +16,22 @@
 		911AF7F72953C66300EFF2B6 /* SobeDesce.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 911AF7F52953C66300EFF2B6 /* SobeDesce.xcdatamodeld */; };
 		911AF7F92953C66500EFF2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 911AF7F82953C66500EFF2B6 /* Assets.xcassets */; };
 		911AF7FC2953C66500EFF2B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 911AF7FA2953C66500EFF2B6 /* LaunchScreen.storyboard */; };
+		911AF8052953CD6400EFF2B6 /* PointsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911AF8032953CD6400EFF2B6 /* PointsCell.swift */; };
+		911AF8062953CD6400EFF2B6 /* PointsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 911AF8042953CD6400EFF2B6 /* PointsCell.xib */; };
+		9124B0AA29645D3E00BA4AEE /* WinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124B0A929645D3E00BA4AEE /* WinnerViewController.swift */; };
+		9124B0AC2964F04200BA4AEE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124B0AB2964F04200BA4AEE /* Player.swift */; };
+		9124B0AE2968BF7E00BA4AEE /* PlayerScoreField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124B0AD2968BF7E00BA4AEE /* PlayerScoreField.swift */; };
+		9124B0B02968C00C00BA4AEE /* PlayerScoreField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9124B0AF2968C00C00BA4AEE /* PlayerScoreField.xib */; };
+		91993A15295E234400EAC59B /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91993A14295E234400EAC59B /* ScoreViewController.swift */; };
+		91993A17295E38FF00EAC59B /* icons8-skull-heart-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 91993A16295E38FF00EAC59B /* icons8-skull-heart-96.png */; };
+		91993A19295F619100EAC59B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91993A18295F619100EAC59B /* HomeViewController.swift */; };
+		91E2D6AF29562E0800027F90 /* PointsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E2D6AD29562E0800027F90 /* PointsCollectionViewCell.swift */; };
+		91E2D6B029562E0800027F90 /* PointsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E2D6AE29562E0800027F90 /* PointsCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		910654502970AF7700CB6B70 /* CostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostTableViewCell.swift; sourceTree = "<group>"; };
+		910654512970AF7700CB6B70 /* CostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CostTableViewCell.xib; sourceTree = "<group>"; };
 		911AF7E92953C66300EFF2B6 /* SobeDesce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SobeDesce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		911AF7EC2953C66300EFF2B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		911AF7EE2953C66300EFF2B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +41,17 @@
 		911AF7F82953C66500EFF2B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		911AF7FB2953C66500EFF2B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		911AF7FD2953C66500EFF2B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		911AF8032953CD6400EFF2B6 /* PointsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsCell.swift; sourceTree = "<group>"; };
+		911AF8042953CD6400EFF2B6 /* PointsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsCell.xib; sourceTree = "<group>"; };
+		9124B0A929645D3E00BA4AEE /* WinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerViewController.swift; sourceTree = "<group>"; };
+		9124B0AB2964F04200BA4AEE /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		9124B0AD2968BF7E00BA4AEE /* PlayerScoreField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScoreField.swift; sourceTree = "<group>"; };
+		9124B0AF2968C00C00BA4AEE /* PlayerScoreField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerScoreField.xib; sourceTree = "<group>"; };
+		91993A14295E234400EAC59B /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		91993A16295E38FF00EAC59B /* icons8-skull-heart-96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-skull-heart-96.png"; sourceTree = "<group>"; };
+		91993A18295F619100EAC59B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		91E2D6AD29562E0800027F90 /* PointsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsCollectionViewCell.swift; sourceTree = "<group>"; };
+		91E2D6AE29562E0800027F90 /* PointsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +84,7 @@
 		911AF7EB2953C66300EFF2B6 /* SobeDesce */ = {
 			isa = PBXGroup;
 			children = (
+				91E2D6AC29562DD000027F90 /* cells */,
 				911AF7EC2953C66300EFF2B6 /* AppDelegate.swift */,
 				911AF7EE2953C66300EFF2B6 /* SceneDelegate.swift */,
 				911AF7F02953C66300EFF2B6 /* ViewController.swift */,
@@ -66,8 +93,28 @@
 				911AF7FA2953C66500EFF2B6 /* LaunchScreen.storyboard */,
 				911AF7FD2953C66500EFF2B6 /* Info.plist */,
 				911AF7F52953C66300EFF2B6 /* SobeDesce.xcdatamodeld */,
+				91993A14295E234400EAC59B /* ScoreViewController.swift */,
+				91993A16295E38FF00EAC59B /* icons8-skull-heart-96.png */,
+				91993A18295F619100EAC59B /* HomeViewController.swift */,
+				9124B0A929645D3E00BA4AEE /* WinnerViewController.swift */,
+				9124B0AB2964F04200BA4AEE /* Player.swift */,
 			);
 			path = SobeDesce;
+			sourceTree = "<group>";
+		};
+		91E2D6AC29562DD000027F90 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				9124B0AF2968C00C00BA4AEE /* PlayerScoreField.xib */,
+				9124B0AD2968BF7E00BA4AEE /* PlayerScoreField.swift */,
+				911AF8032953CD6400EFF2B6 /* PointsCell.swift */,
+				911AF8042953CD6400EFF2B6 /* PointsCell.xib */,
+				91E2D6AD29562E0800027F90 /* PointsCollectionViewCell.swift */,
+				91E2D6AE29562E0800027F90 /* PointsCollectionViewCell.xib */,
+				910654502970AF7700CB6B70 /* CostTableViewCell.swift */,
+				910654512970AF7700CB6B70 /* CostTableViewCell.xib */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +175,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				911AF8062953CD6400EFF2B6 /* PointsCell.xib in Resources */,
+				91993A17295E38FF00EAC59B /* icons8-skull-heart-96.png in Resources */,
+				910654532970AF7700CB6B70 /* CostTableViewCell.xib in Resources */,
+				91E2D6B029562E0800027F90 /* PointsCollectionViewCell.xib in Resources */,
+				9124B0B02968C00C00BA4AEE /* PlayerScoreField.xib in Resources */,
 				911AF7FC2953C66500EFF2B6 /* LaunchScreen.storyboard in Resources */,
 				911AF7F92953C66500EFF2B6 /* Assets.xcassets in Resources */,
 				911AF7F42953C66300EFF2B6 /* Main.storyboard in Resources */,
@@ -141,9 +193,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91993A15295E234400EAC59B /* ScoreViewController.swift in Sources */,
 				911AF7F12953C66300EFF2B6 /* ViewController.swift in Sources */,
+				9124B0AA29645D3E00BA4AEE /* WinnerViewController.swift in Sources */,
 				911AF7ED2953C66300EFF2B6 /* AppDelegate.swift in Sources */,
+				91993A19295F619100EAC59B /* HomeViewController.swift in Sources */,
 				911AF7EF2953C66300EFF2B6 /* SceneDelegate.swift in Sources */,
+				910654522970AF7700CB6B70 /* CostTableViewCell.swift in Sources */,
+				91E2D6AF29562E0800027F90 /* PointsCollectionViewCell.swift in Sources */,
+				9124B0AE2968BF7E00BA4AEE /* PlayerScoreField.swift in Sources */,
+				911AF8052953CD6400EFF2B6 /* PointsCell.swift in Sources */,
+				9124B0AC2964F04200BA4AEE /* Player.swift in Sources */,
 				911AF7F72953C66300EFF2B6 /* SobeDesce.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,8 +357,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,8 +387,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
