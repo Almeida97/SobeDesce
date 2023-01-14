@@ -34,12 +34,12 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
             }else{
                 if (Int(round) == 0) {
                     self.players[num].rounds.append("\(5 * trunfo.trunfoValue)")
-                    let newScore = currentPLayer.totalPoints[playerTotalPoints] + (5 * trunfo.rawValue)
+                    let newScore = currentPLayer.totalPoints[playerTotalPoints] + (5 * trunfo.trunfoValue)
                     self.players[num].roundColor.append(.red)
                     self.players[num].totalPoints.append(newScore)
                 }else{
                     self.players[num].rounds.append("\(Int(round)! * trunfo.trunfoValue)")
-                    let newScore = currentPLayer.totalPoints[playerTotalPoints] - (Int(round)! * trunfo.rawValue)
+                    let newScore = currentPLayer.totalPoints[playerTotalPoints] - (Int(round)! * trunfo.trunfoValue)
                     self.players[num].roundColor.append(.green)
                     self.players[num].totalPoints.append(newScore)
                 }
