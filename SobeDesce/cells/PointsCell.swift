@@ -40,7 +40,7 @@ extension PointsCell: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = cellColletionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! PointsCollectionViewCell
         cell.pointsPerRoundLabel.text = "\(player.rounds[indexPath.row])"
-        cell.pointsPerRoundLabel.textColor = player.roundColor[indexPath.row]
+        cell.pointsPerRoundLabel.textColor = .green //player.roundColor[indexPath.row]
         cell.totalPointsLabel.text = "\(player.totalPoints[indexPath.row])"
         
         return cell

@@ -143,13 +143,23 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
             }
             players.append(Player(name: playername))
         }
+       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         startGamePressed()
         if segue.identifier == "startGameSegue" {
             let gameScreen: ViewController = segue.destination as! ViewController
+            //let dateFormatter = DateFormatter()
+            //dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
+            //let currentDate = dateFormatter.string(from: Date())
+            let uuid = UUID().uuidString
+            CoreDataManager.shared.createGame(withName: "\(uuid)", players: self.players)
             gameScreen.players = self.players
+            gameScreen.gameName = uuid
+        }
+        if segue.identifier == "showRecentSegue" {
+            let savedGameScreen: SavedGamesViewController = segue.destination as! SavedGamesViewController
         }
     }
 

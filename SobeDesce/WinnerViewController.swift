@@ -14,6 +14,7 @@ class WinnerViewController: UIViewController {
     @IBOutlet weak var winnerLabel: UILabel!
     @IBOutlet weak var backgroundView: UIView!
     var players: [Player] = []
+    var gameName: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,11 @@ class WinnerViewController: UIViewController {
         if let winner = players.firstIndex(where: { $0.totalPoints.last! <= 0 }) {
             let winnerPlayer = players.remove(at: winner)
             winnerLabel.text =  "Winner is \(winnerPlayer.name)"
+            if let thisGame = CoreDataManager.shared.fetchGame(withName: gameName) {
+                CoreDataManager.shared.deleteGame(thisGame)
+            }
         }
+        
     }
 }
 

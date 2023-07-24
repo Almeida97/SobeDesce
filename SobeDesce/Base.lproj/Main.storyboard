@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RL9-tp-hjl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RL9-tp-hjl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JmW-6n-ga1">
-                                <rect key="frame" x="10" y="98" width="394" height="684"/>
+                                <rect key="frame" x="10" y="102" width="394" height="680"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxM-C0-85k">
@@ -161,11 +162,12 @@
                         <outlet property="scoreButton" destination="S3b-fB-pCY" id="Kb8-Ya-mGi"/>
                         <outlet property="tfStack" destination="W7k-aM-0E4" id="TtP-49-DNs"/>
                         <outlet property="viewBack" destination="WsM-EL-LrD" id="FA6-Ai-Hc1"/>
+                        <segue destination="2tT-U6-AU1" kind="show" identifier="showWinnerSegue" id="mLK-Oi-dxI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hey-MO-BEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2574" y="393"/>
+            <point key="canvasLocation" x="2778" y="80"/>
         </scene>
         <!--Winner View Controller-->
         <scene sceneID="n0n-ze-BMB">
@@ -188,7 +190,7 @@
                                         <sections/>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlX-gn-Kab">
-                                        <rect key="frame" x="140" y="300" width="94.5" height="30"/>
+                                        <rect key="frame" x="133.5" y="300" width="107" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="fwY-F0-bFu"/>
                                         </constraints>
@@ -264,7 +266,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gZ6-2k-uhz">
-                                <rect key="frame" x="30" y="248" width="354" height="489"/>
+                                <rect key="frame" x="30" y="252" width="354" height="485"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JsP-JH-A6l">
                                 <rect key="frame" x="30" y="767" width="354" height="30"/>
@@ -301,7 +303,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sobe e Desce" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHS-Si-iZ3">
-                                <rect key="frame" x="30" y="118" width="354" height="100"/>
+                                <rect key="frame" x="30" y="122" width="354" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="2ss-ys-ThE"/>
                                 </constraints>
@@ -309,6 +311,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="CH3-xM-Fpb">
+                                <rect key="frame" x="132" y="192" width="172" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Recent Games"/>
+                                <connections>
+                                    <segue destination="hXj-vN-lz1" kind="show" identifier="showRecentSegue" id="cgl-zJ-8gT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n43-q3-bke"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -341,13 +352,57 @@
             </objects>
             <point key="canvasLocation" x="834.78260869565224" y="63.616071428571423"/>
         </scene>
+        <!--Saved Games View Controller-->
+        <scene sceneID="KsN-Ns-dbo">
+            <objects>
+                <viewController id="hXj-vN-lz1" customClass="SavedGamesViewController" customModule="SobeDesce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jIQ-hT-Pzx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LKi-wz-kTv">
+                                <rect key="frame" x="30" y="229" width="354" height="583"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNP-en-3jc">
+                                <rect key="frame" x="102" y="142" width="210" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="hwv-s7-Kcs"/>
+                                    <constraint firstAttribute="height" constant="37" id="mkP-SN-91V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fXd-lE-2B6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LKi-wz-kTv" firstAttribute="top" secondItem="aNP-en-3jc" secondAttribute="bottom" constant="50" id="3kh-Uz-9sG"/>
+                            <constraint firstItem="LKi-wz-kTv" firstAttribute="leading" secondItem="fXd-lE-2B6" secondAttribute="leading" constant="30" id="aFb-BE-cWs"/>
+                            <constraint firstItem="aNP-en-3jc" firstAttribute="top" secondItem="fXd-lE-2B6" secondAttribute="top" constant="50" id="iby-KU-wKN"/>
+                            <constraint firstItem="fXd-lE-2B6" firstAttribute="trailing" secondItem="LKi-wz-kTv" secondAttribute="trailing" constant="30" id="oiU-rm-TRn"/>
+                            <constraint firstItem="fXd-lE-2B6" firstAttribute="bottom" secondItem="LKi-wz-kTv" secondAttribute="bottom" constant="50" id="uGn-rh-f41"/>
+                            <constraint firstItem="aNP-en-3jc" firstAttribute="centerX" secondItem="jIQ-hT-Pzx" secondAttribute="centerX" id="ugZ-Ak-8Nm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qzV-Ye-s1e"/>
+                    <connections>
+                        <outlet property="recentGamesTable" destination="LKi-wz-kTv" id="dsr-TN-MGb"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="openSavedGame" id="7I9-8g-LAG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ja0-qE-aU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1499" y="-905"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="X4e-pB-FCC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RL9-tp-hjl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7qa-jf-U5H">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -360,6 +415,10 @@
             <point key="canvasLocation" x="-23.188405797101453" y="63.616071428571423"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mLK-Oi-dxI"/>
+        <segue reference="7I9-8g-LAG"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Naipe_copas" width="668" height="731"/>
         <image name="Naipe_paus" width="668" height="712"/>

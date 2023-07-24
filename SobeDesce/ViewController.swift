@@ -12,6 +12,7 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
     @IBOutlet weak var endRoundBtn: UIButton!
     @IBOutlet var viewBackground: UIView!
     var players: [Player] = []
+    var gameName: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,18 +30,18 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
             let playerTotalPoints = currentPLayer.totalPoints.count-1
             if round == "-" {
                 self.players[num].rounds.append("-")
-                self.players[num].roundColor.append(.green)
+                //self.players[num].roundColor.append(.green)
                 self.players[num].totalPoints.append(currentPLayer.totalPoints[playerTotalPoints])
             }else{
                 if (Int(round) == 0) {
                     self.players[num].rounds.append("\(5 * trunfo.trunfoValue)")
                     let newScore = currentPLayer.totalPoints[playerTotalPoints] + (5 * trunfo.trunfoValue)
-                    self.players[num].roundColor.append(.red)
+                   //self.players[num].roundColor.append(.red)
                     self.players[num].totalPoints.append(newScore)
                 }else{
                     self.players[num].rounds.append("\(Int(round)! * trunfo.trunfoValue)")
                     let newScore = currentPLayer.totalPoints[playerTotalPoints] - (Int(round)! * trunfo.trunfoValue)
-                    self.players[num].roundColor.append(.green)
+                   //self.players[num].roundColor.append(.green)
                     self.players[num].totalPoints.append(newScore)
                 }
             }
@@ -48,6 +49,7 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
             num+=1
         }
         self.scoreTableView.reloadData()
+        CoreDataManager.shared.updatePlayerData(from: self.gameName, players: self.players)
         self.checkScore()
     }
     
@@ -60,6 +62,7 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
         if segue.identifier == "showWinner" {
             let winnerVC: WinnerViewController = segue.destination as! WinnerViewController
             winnerVC.players = self.players
+            winnerVC.gameName = self.gameName
         }
     }
     

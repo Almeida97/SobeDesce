@@ -33,13 +33,12 @@ enum Trunfos: Int{
       }
     
 }
+
 protocol MyDataSendingDelegateProtocol {
     func sendDataToFirstViewController(roundScoreArray: [String], trunfo: Trunfos)
     func checkScore()->Bool
 }
-extension UIStackView{
 
-}
 class ScoreViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var scoreButton: UIButton!
@@ -52,6 +51,7 @@ class ScoreViewController: UIViewController, UITextFieldDelegate {
     var delegate: MyDataSendingDelegateProtocol? = nil
     var trunfo: Trunfos?
     var players: [Player] = []
+    var gameName: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -160,6 +160,7 @@ class ScoreViewController: UIViewController, UITextFieldDelegate {
                 if (winnerExists ?? false)
                   {
                     pvc.performSegue(withIdentifier: "showWinner", sender: nil)
+                    
                   }
                 
               }
