@@ -13,7 +13,15 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
     @IBOutlet var viewBackground: UIView!
     var players: [Player] = []
     var gameName: String = ""
+    var usedColors = Set<myColor>()
     
+    func randomColor(usedColors: Set<myColor>) -> myColor? {
+        let availableColors = Set(myColor.allCases).subtracting(usedColors)
+        guard !availableColors.isEmpty else { return nil }
+        let randomIndex = Int.random(in: 0..<availableColors.count)
+        return Array(availableColors)[randomIndex]
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         scoreTableView.delegate = self
@@ -21,7 +29,10 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
         scoreTableView.register(UINib(nibName: "PointsCell", bundle: nil), forCellReuseIdentifier: "cell")
         
     }
-    
+
+    override func viewDidAppear(_ animated: Bool) {
+        scoreTableView.reloadData()
+    }
     
     func sendDataToFirstViewController(roundScoreArray: [String],trunfo: Trunfos) {
         var num = 0
@@ -96,19 +107,33 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 120
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PointsCell
         cell.configure(with: players[indexPath.row])
         cell.scrollLast()
+        if let randomColor = randomColor(usedColors: usedColors) {
+            usedColors.insert(randomColor)
+            cell.randomColor = randomColor.associatedColor
+        }
+        
         cell.playerLabel.text = players[indexPath.row].name
+        let lastSection = cell.cellColletionView.numberOfSections - 1
+        let lastItem = cell.cellColletionView.numberOfItems(inSection: lastSection) - 1
+        let lastIndexPath = IndexPath(item: lastItem, section: lastSection)
+
+        cell.cellColletionView.scrollToItem(at: lastIndexPath, at: .bottom, animated: true)
+        
         return cell
     }
 }

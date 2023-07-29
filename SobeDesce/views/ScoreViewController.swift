@@ -7,33 +7,6 @@
 
 import UIKit
 
-enum Trunfos: Int{
-    case outro
-    case paus
-    case copas
-    case copasEscuras
-   
-    var trunfoValue: Int {
-        switch self {
-        case .outro:
-          return 1
-
-        case .copas:
-          return 2
-
-        case .copasEscuras:
-          return 3
-
-        case .paus:
-          return 1
-
-        default:
-          break
-        }
-      }
-    
-}
-
 protocol MyDataSendingDelegateProtocol {
     func sendDataToFirstViewController(roundScoreArray: [String], trunfo: Trunfos)
     func checkScore()->Bool
@@ -78,7 +51,6 @@ class ScoreViewController: UIViewController, UITextFieldDelegate {
     
     private func tagBasedTextField(_ textField: UITextField) {
         let nextTextFieldTag = textField.tag + 1
-
         if let nextTextField = textField.superview?.viewWithTag(nextTextFieldTag) as? UITextField {
             nextTextField.becomeFirstResponder()
         } else {
@@ -180,6 +152,7 @@ extension UIViewController {
     }
 
 }
+
 extension UIButton {
     func borderAnimation(show: Bool) {
         let border = CALayer()

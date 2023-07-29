@@ -29,11 +29,15 @@ class WinnerViewController: UIViewController {
         if let winner = players.firstIndex(where: { $0.totalPoints.last! <= 0 }) {
             let winnerPlayer = players.remove(at: winner)
             winnerLabel.text =  "Winner is \(winnerPlayer.name)"
-            if let thisGame = CoreDataManager.shared.fetchGame(withName: gameName) {
-                CoreDataManager.shared.deleteGame(thisGame)
-            }
+
         }
         
+    }
+    
+    @IBAction func newGameBtnPressed(_ sender: Any) {
+        if let thisGame = CoreDataManager.shared.fetchGame(withName: gameName) {
+            CoreDataManager.shared.deleteGame(thisGame)
+        }
     }
 }
 

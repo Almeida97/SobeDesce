@@ -27,6 +27,10 @@
 		91993A19295F619100EAC59B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91993A18295F619100EAC59B /* HomeViewController.swift */; };
 		91E2D6AF29562E0800027F90 /* PointsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E2D6AD29562E0800027F90 /* PointsCollectionViewCell.swift */; };
 		91E2D6B029562E0800027F90 /* PointsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E2D6AE29562E0800027F90 /* PointsCollectionViewCell.xib */; };
+		CE6561072A73C16E009393FA /* myColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6561062A73C16E009393FA /* myColors.swift */; };
+		CE6561092A75ADAD009393FA /* Trunfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6561082A75ADAD009393FA /* Trunfos.swift */; };
+		CE87392A2A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8739282A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.swift */; };
+		CE87392B2A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8739292A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.xib */; };
 		CE89C62F2A6940CE0000C5BB /* SavedGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89C62E2A6940CE0000C5BB /* SavedGamesViewController.swift */; };
 		CE89C6322A694DEF0000C5BB /* SaveGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89C6302A694DEF0000C5BB /* SaveGameCell.swift */; };
 		CE89C6332A694DEF0000C5BB /* SaveGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE89C6312A694DEF0000C5BB /* SaveGameCell.xib */; };
@@ -56,6 +60,10 @@
 		91993A18295F619100EAC59B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		91E2D6AD29562E0800027F90 /* PointsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsCollectionViewCell.swift; sourceTree = "<group>"; };
 		91E2D6AE29562E0800027F90 /* PointsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsCollectionViewCell.xib; sourceTree = "<group>"; };
+		CE6561062A73C16E009393FA /* myColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myColors.swift; sourceTree = "<group>"; };
+		CE6561082A75ADAD009393FA /* Trunfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trunfos.swift; sourceTree = "<group>"; };
+		CE8739282A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSavedGameTableViewCell.swift; sourceTree = "<group>"; };
+		CE8739292A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerSavedGameTableViewCell.xib; sourceTree = "<group>"; };
 		CE89C62E2A6940CE0000C5BB /* SavedGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedGamesViewController.swift; sourceTree = "<group>"; };
 		CE89C6302A694DEF0000C5BB /* SaveGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGameCell.swift; sourceTree = "<group>"; };
 		CE89C6312A694DEF0000C5BB /* SaveGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveGameCell.xib; sourceTree = "<group>"; };
@@ -92,22 +100,16 @@
 		911AF7EB2953C66300EFF2B6 /* SobeDesce */ = {
 			isa = PBXGroup;
 			children = (
+				CE479E692A7051E300CE26D9 /* Models */,
+				CE479E682A7051BD00CE26D9 /* views */,
 				91E2D6AC29562DD000027F90 /* cells */,
 				911AF7EC2953C66300EFF2B6 /* AppDelegate.swift */,
 				911AF7EE2953C66300EFF2B6 /* SceneDelegate.swift */,
-				911AF7F02953C66300EFF2B6 /* ViewController.swift */,
 				911AF7F22953C66300EFF2B6 /* Main.storyboard */,
 				911AF7F82953C66500EFF2B6 /* Assets.xcassets */,
 				911AF7FA2953C66500EFF2B6 /* LaunchScreen.storyboard */,
 				911AF7FD2953C66500EFF2B6 /* Info.plist */,
-				911AF7F52953C66300EFF2B6 /* SobeDesce.xcdatamodeld */,
-				91993A14295E234400EAC59B /* ScoreViewController.swift */,
 				91993A16295E38FF00EAC59B /* icons8-skull-heart-96.png */,
-				91993A18295F619100EAC59B /* HomeViewController.swift */,
-				9124B0A929645D3E00BA4AEE /* WinnerViewController.swift */,
-				9124B0AB2964F04200BA4AEE /* Player.swift */,
-				CE89C62E2A6940CE0000C5BB /* SavedGamesViewController.swift */,
-				CE89C6342A69D18F0000C5BB /* CoreDataManager.swift */,
 			);
 			path = SobeDesce;
 			sourceTree = "<group>";
@@ -115,6 +117,7 @@
 		91E2D6AC29562DD000027F90 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				CE479E6A2A70530700CE26D9 /* ssavedGame */,
 				9124B0AF2968C00C00BA4AEE /* PlayerScoreField.xib */,
 				9124B0AD2968BF7E00BA4AEE /* PlayerScoreField.swift */,
 				911AF8032953CD6400EFF2B6 /* PointsCell.swift */,
@@ -123,10 +126,43 @@
 				91E2D6AE29562E0800027F90 /* PointsCollectionViewCell.xib */,
 				910654502970AF7700CB6B70 /* CostTableViewCell.swift */,
 				910654512970AF7700CB6B70 /* CostTableViewCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		CE479E682A7051BD00CE26D9 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				911AF7F02953C66300EFF2B6 /* ViewController.swift */,
+				91993A14295E234400EAC59B /* ScoreViewController.swift */,
+				91993A18295F619100EAC59B /* HomeViewController.swift */,
+				9124B0A929645D3E00BA4AEE /* WinnerViewController.swift */,
+				CE89C62E2A6940CE0000C5BB /* SavedGamesViewController.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		CE479E692A7051E300CE26D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				911AF7F52953C66300EFF2B6 /* SobeDesce.xcdatamodeld */,
+				9124B0AB2964F04200BA4AEE /* Player.swift */,
+				CE89C6342A69D18F0000C5BB /* CoreDataManager.swift */,
+				CE6561062A73C16E009393FA /* myColors.swift */,
+				CE6561082A75ADAD009393FA /* Trunfos.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE479E6A2A70530700CE26D9 /* ssavedGame */ = {
+			isa = PBXGroup;
+			children = (
+				CE8739292A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.xib */,
+				CE8739282A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.swift */,
 				CE89C6302A694DEF0000C5BB /* SaveGameCell.swift */,
 				CE89C6312A694DEF0000C5BB /* SaveGameCell.xib */,
 			);
-			path = cells;
+			path = ssavedGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +229,7 @@
 				910654532970AF7700CB6B70 /* CostTableViewCell.xib in Resources */,
 				91E2D6B029562E0800027F90 /* PointsCollectionViewCell.xib in Resources */,
 				9124B0B02968C00C00BA4AEE /* PlayerScoreField.xib in Resources */,
+				CE87392B2A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.xib in Resources */,
 				911AF7FC2953C66500EFF2B6 /* LaunchScreen.storyboard in Resources */,
 				911AF7F92953C66500EFF2B6 /* Assets.xcassets in Resources */,
 				911AF7F42953C66300EFF2B6 /* Main.storyboard in Resources */,
@@ -207,8 +244,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				91993A15295E234400EAC59B /* ScoreViewController.swift in Sources */,
+				CE6561072A73C16E009393FA /* myColors.swift in Sources */,
 				911AF7F12953C66300EFF2B6 /* ViewController.swift in Sources */,
+				CE87392A2A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.swift in Sources */,
 				9124B0AA29645D3E00BA4AEE /* WinnerViewController.swift in Sources */,
+				CE6561092A75ADAD009393FA /* Trunfos.swift in Sources */,
 				CE89C6352A69D18F0000C5BB /* CoreDataManager.swift in Sources */,
 				911AF7ED2953C66300EFF2B6 /* AppDelegate.swift in Sources */,
 				91993A19295F619100EAC59B /* HomeViewController.swift in Sources */,

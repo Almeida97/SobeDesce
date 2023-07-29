@@ -150,11 +150,11 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         startGamePressed()
         if segue.identifier == "startGameSegue" {
             let gameScreen: ViewController = segue.destination as! ViewController
-            //let dateFormatter = DateFormatter()
-            //dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
-            //let currentDate = dateFormatter.string(from: Date())
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
+            let currentDate = dateFormatter.string(from: Date())
             let uuid = UUID().uuidString
-            CoreDataManager.shared.createGame(withName: "\(uuid)", players: self.players)
+            CoreDataManager.shared.createGame(withName: "\(uuid)", players: self.players, dateCreated: currentDate)
             gameScreen.players = self.players
             gameScreen.gameName = uuid
         }

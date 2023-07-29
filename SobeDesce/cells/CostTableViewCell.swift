@@ -27,20 +27,17 @@ class CostTableViewCell: UITableViewCell {
     @IBOutlet weak var playerCostLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func configure(with player: Player){
         
         playerNameLabel.text = player.name
         let formatter = NumberFormatter()
-        formatter.locale = Locale.current // Change this to another locale if you want to force a specific locale, otherwise this is redundant as the current locale is the default already
+        formatter.locale = Locale.current
         formatter.usesGroupingSeparator = true
         formatter.numberStyle = .currency
          var cost = player.cost

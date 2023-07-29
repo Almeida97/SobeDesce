@@ -20,11 +20,13 @@ class SavedGamesViewController: UIViewController {
         recentGamesTable.delegate = self
         recentGamesTable.dataSource = self
         recentGamesTable.register(UINib(nibName: "SaveGameCell", bundle: nil), forCellReuseIdentifier: "saveGameCell")
-        // Do any additional setup after loading the view.
         recentGames = CoreDataManager.shared.fetchAllGames()
         recentGamesTable.reloadData()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        players = []
+    }
 }
 
 extension SavedGamesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -37,12 +39,15 @@ extension SavedGamesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "saveGameCell", for: indexPath) as! SaveGameCell
-        cell.gameLabel.text = recentGames?[indexPath.row].name
-        //cell.dateLabel.text = recentGames?[indexPath.row].gameDate
+        let game = recentGames![indexPath.row]
+        cell.configureTableView(with: game)
+        cell.playerListTableView.reloadData()
+        //transform date type to string to show on label
+        cell.dateLabel.text = recentGames?[indexPath.row].gameDate
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 220
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

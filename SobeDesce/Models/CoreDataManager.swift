@@ -25,10 +25,21 @@ struct CoreDataManager {
         return container
     }()
 
-    func createGame(withName gameName: String, players: [Player]) -> Game? {
+    func fetchPlayers(from game: Game) -> [Player]{
+        var players: [Player] = []
+        if let savedPlayers = game.players?.allObjects as? [PlayerEnt] {
+            for savedPlayer in savedPlayers {
+                players.append(Player(name: savedPlayer.name!, rounds: savedPlayer.rounds!, totalPoints: savedPlayer.totalPoints!, cost: savedPlayer.cost, winner: savedPlayer.winner))
+            }
+            
+        }
+        return players
+    }
+    func createGame(withName gameName: String, players: [Player], dateCreated: String) -> Game? {
         let context = persistentContainer.viewContext
         let game = NSEntityDescription.insertNewObject(forEntityName: "Game", into: context) as! Game
         game.name = gameName
+        game.gameDate = dateCreated
         for player in players {
             let playerToSave = NSEntityDescription.insertNewObject(forEntityName: "PlayerEnt", into: context) as! PlayerEnt
             playerToSave.name = player.name
