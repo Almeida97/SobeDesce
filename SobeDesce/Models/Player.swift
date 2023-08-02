@@ -11,7 +11,6 @@ import UIKit
 struct Player {
     var name: String
     var rounds: [String] = [" "]
-    //var roundColor: [UIColor] = [.green]
     var totalPoints: [Int] = [25]
     var cost: Double = 0
     var winner: Bool = false

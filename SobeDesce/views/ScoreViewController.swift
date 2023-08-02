@@ -125,17 +125,17 @@ class ScoreViewController: UIViewController, UITextFieldDelegate {
         }
         if self.delegate != nil {
             self.delegate?.sendDataToFirstViewController(roundScoreArray: dataToBeSent, trunfo: trunfo ?? Trunfos.outro)
-            weak var pvc:UIViewController! = self.presentingViewController?.children[1]
-              dismiss(animated: true)
-            {
-                let winnerExists = self.delegate?.checkScore()
-                if (winnerExists ?? false)
-                  {
-                    pvc.performSegue(withIdentifier: "showWinner", sender: nil)
-                    
-                  }
-                
-              }
+            if let presentingVC = self.presentingViewController {
+                dismiss(animated: true)
+                if let targetViewController = presentingVC.children.first(where: { String(describing: type(of: $0)) == "ViewController" }) {
+                    let winnerExists = self.delegate?.checkScore()
+                    if (winnerExists ?? false)
+                      {
+                        targetViewController.performSegue(withIdentifier: "showWinner", sender: nil)
+                        
+                      }
+                }
+            }
         }
     }
 }

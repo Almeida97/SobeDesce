@@ -14,6 +14,8 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
     var players: [Player] = []
     var gameName: String = ""
     var usedColors = Set<myColor>()
+    var myRandomColor: UIColor = .red
+    var playerColor: [UIColor] = []
     
     func randomColor(usedColors: Set<myColor>) -> myColor? {
         let availableColors = Set(myColor.allCases).subtracting(usedColors)
@@ -29,11 +31,10 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
         scoreTableView.register(UINib(nibName: "PointsCell", bundle: nil), forCellReuseIdentifier: "cell")
         
     }
-
-    override func viewDidAppear(_ animated: Bool) {
+    
+    override func viewWillAppear(_ animated: Bool) {
         scoreTableView.reloadData()
     }
-    
     func sendDataToFirstViewController(roundScoreArray: [String],trunfo: Trunfos) {
         var num = 0
         for round in roundScoreArray {
@@ -41,18 +42,15 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
             let playerTotalPoints = currentPLayer.totalPoints.count-1
             if round == "-" {
                 self.players[num].rounds.append("-")
-                //self.players[num].roundColor.append(.green)
                 self.players[num].totalPoints.append(currentPLayer.totalPoints[playerTotalPoints])
             }else{
                 if (Int(round) == 0) {
-                    self.players[num].rounds.append("\(5 * trunfo.trunfoValue)")
+                    self.players[num].rounds.append("+ \(5 * trunfo.trunfoValue)")
                     let newScore = currentPLayer.totalPoints[playerTotalPoints] + (5 * trunfo.trunfoValue)
-                   //self.players[num].roundColor.append(.red)
                     self.players[num].totalPoints.append(newScore)
                 }else{
-                    self.players[num].rounds.append("\(Int(round)! * trunfo.trunfoValue)")
+                    self.players[num].rounds.append("- \(Int(round)! * trunfo.trunfoValue)")
                     let newScore = currentPLayer.totalPoints[playerTotalPoints] - (Int(round)! * trunfo.trunfoValue)
-                   //self.players[num].roundColor.append(.green)
                     self.players[num].totalPoints.append(newScore)
                 }
             }
@@ -101,7 +99,6 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
         }
         return false
     }
-    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -120,20 +117,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PointsCell
-        cell.configure(with: players[indexPath.row])
+        
         cell.scrollLast()
         if let randomColor = randomColor(usedColors: usedColors) {
             usedColors.insert(randomColor)
-            cell.randomColor = randomColor.associatedColor
+            playerColor.append(randomColor.associatedColor)
         }
-        
+        cell.configure(with: players[indexPath.row], randomColor: playerColor[indexPath.row])
         cell.playerLabel.text = players[indexPath.row].name
-        let lastSection = cell.cellColletionView.numberOfSections - 1
-        let lastItem = cell.cellColletionView.numberOfItems(inSection: lastSection) - 1
-        let lastIndexPath = IndexPath(item: lastItem, section: lastSection)
-
-        cell.cellColletionView.scrollToItem(at: lastIndexPath, at: .bottom, animated: true)
-        
         return cell
     }
 }

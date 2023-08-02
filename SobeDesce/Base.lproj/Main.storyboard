@@ -128,6 +128,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Enter Points"/>
                                         <connections>
                                             <action selector="sendScoreData:" destination="fcU-7Y-DPa" eventType="touchUpInside" id="NU1-mL-d3h"/>
+                                            <segue destination="iTd-Ti-Fm4" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="47p-rH-Tar"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -166,6 +167,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hey-MO-BEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="iTd-Ti-Fm4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2778" y="80"/>
         </scene>
@@ -198,7 +200,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="New Game"/>
                                         <connections>
                                             <action selector="newGameBtnPressed:" destination="2tT-U6-AU1" eventType="touchUpInside" id="txm-aF-a9u"/>
-                                            <segue destination="A5f-Tv-2AB" kind="unwind" unwindAction="unwindToHome:" id="W3M-pr-od6"/>
+                                            <segue destination="2HO-aS-mrq" kind="unwind" unwindAction="unwindToHome:" id="G3a-4r-iEA"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner winner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pb1-2m-LgN">
@@ -313,7 +315,7 @@
                                 <rect key="frame" x="121" y="192" width="172" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Recent Games"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Recent Games" buttonSize="large"/>
                                 <connections>
                                     <segue destination="hXj-vN-lz1" kind="show" identifier="showRecentSegue" id="cgl-zJ-8gT"/>
                                 </connections>
@@ -323,7 +325,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="n43-q3-bke" firstAttribute="trailing" secondItem="XZF-bI-oJs" secondAttribute="trailing" constant="30" id="3FT-ge-2DE"/>
-                            <constraint firstItem="CH3-xM-Fpb" firstAttribute="centerX" secondItem="gHS-Si-iZ3" secondAttribute="centerX" id="63X-No-gxz"/>
+                            <constraint firstItem="gHS-Si-iZ3" firstAttribute="centerX" secondItem="0RW-ky-F1Z" secondAttribute="centerX" id="7pZ-ZA-SAv"/>
                             <constraint firstItem="n43-q3-bke" firstAttribute="trailing" secondItem="JsP-JH-A6l" secondAttribute="trailing" constant="30" id="AZu-83-qkr"/>
                             <constraint firstItem="XZF-bI-oJs" firstAttribute="top" secondItem="JsP-JH-A6l" secondAttribute="bottom" constant="5" id="EQO-wc-4bY"/>
                             <constraint firstItem="JsP-JH-A6l" firstAttribute="leading" secondItem="n43-q3-bke" secondAttribute="leading" constant="30" id="Eq0-GI-dIH"/>
@@ -334,7 +336,7 @@
                             <constraint firstItem="JsP-JH-A6l" firstAttribute="top" secondItem="gZ6-2k-uhz" secondAttribute="bottom" constant="30" id="f2B-7I-4du"/>
                             <constraint firstItem="gZ6-2k-uhz" firstAttribute="leading" secondItem="n43-q3-bke" secondAttribute="leading" constant="30" id="iRv-Og-I9P"/>
                             <constraint firstItem="CH3-xM-Fpb" firstAttribute="top" secondItem="gHS-Si-iZ3" secondAttribute="bottom" constant="20" id="kPx-pt-tYf"/>
-                            <constraint firstItem="gHS-Si-iZ3" firstAttribute="centerX" secondItem="0RW-ky-F1Z" secondAttribute="centerX" id="yLo-vT-paP"/>
+                            <constraint firstItem="CH3-xM-Fpb" firstAttribute="centerX" secondItem="n43-q3-bke" secondAttribute="centerX" id="tXb-Uk-Vp8"/>
                             <constraint firstItem="n43-q3-bke" firstAttribute="trailing" secondItem="gZ6-2k-uhz" secondAttribute="trailing" constant="30" id="zwq-Fv-CKw"/>
                         </constraints>
                     </view>
@@ -348,6 +350,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDx-aG-Yxq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2HO-aS-mrq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="834.78260869565224" y="63.616071428571423"/>
         </scene>
