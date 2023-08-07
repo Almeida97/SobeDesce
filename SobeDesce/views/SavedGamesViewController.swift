@@ -26,6 +26,7 @@ class SavedGamesViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         players = []
+        recentGamesTable.reloadData()
     }
 }
 
