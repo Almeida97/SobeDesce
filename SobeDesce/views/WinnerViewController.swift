@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class WinnerViewController: UIViewController {
 
@@ -15,6 +16,7 @@ class WinnerViewController: UIViewController {
     @IBOutlet weak var backgroundView: UIView!
     var players: [Player] = []
     var gameName: String = ""
+    let animationView = LottieAnimationView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,18 @@ class WinnerViewController: UIViewController {
             winnerLabel.text =  "Winner is \(winnerPlayer.name)"
 
         }
+        playAnimation()
+        
+    }
+    
+    private func playAnimation() {
+        let animationView = LottieAnimationView(name: "animation_ll2lyl9k")
+        let winnerLabelFrame = winnerLabel.frame
+        animationView.frame = CGRect(x: winnerLabelFrame.maxX - 100, y: winnerLabelFrame.midY + 150, width: 150, height: 150)
+        animationView.contentMode = .scaleAspectFill
+        animationView.loopMode = .autoReverse
+        animationView.play()
+        view.addSubview(animationView)
         
     }
     

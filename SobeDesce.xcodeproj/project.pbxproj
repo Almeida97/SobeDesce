@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		758F149307E176AEE2C3A5A2 /* Pods_SobeDesce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8ABF6BA50ED44CC7E2502F /* Pods_SobeDesce.framework */; };
 		910654522970AF7700CB6B70 /* CostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910654502970AF7700CB6B70 /* CostTableViewCell.swift */; };
 		910654532970AF7700CB6B70 /* CostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 910654512970AF7700CB6B70 /* CostTableViewCell.xib */; };
 		911AF7ED2953C66300EFF2B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911AF7EC2953C66300EFF2B6 /* AppDelegate.swift */; };
@@ -35,9 +36,11 @@
 		CE89C6322A694DEF0000C5BB /* SaveGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89C6302A694DEF0000C5BB /* SaveGameCell.swift */; };
 		CE89C6332A694DEF0000C5BB /* SaveGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE89C6312A694DEF0000C5BB /* SaveGameCell.xib */; };
 		CE89C6352A69D18F0000C5BB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89C6342A69D18F0000C5BB /* CoreDataManager.swift */; };
+		CEA649902A82BAC20025C5F8 /* animation_ll2lyl9k.json in Resources */ = {isa = PBXBuildFile; fileRef = CEA6498F2A82BAC20025C5F8 /* animation_ll2lyl9k.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27B3D91ECFC19EE83A58994B /* Pods-SobeDesce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SobeDesce.release.xcconfig"; path = "Target Support Files/Pods-SobeDesce/Pods-SobeDesce.release.xcconfig"; sourceTree = "<group>"; };
 		910654502970AF7700CB6B70 /* CostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostTableViewCell.swift; sourceTree = "<group>"; };
 		910654512970AF7700CB6B70 /* CostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CostTableViewCell.xib; sourceTree = "<group>"; };
 		911AF7E92953C66300EFF2B6 /* SobeDesce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SobeDesce.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +63,8 @@
 		91993A18295F619100EAC59B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		91E2D6AD29562E0800027F90 /* PointsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsCollectionViewCell.swift; sourceTree = "<group>"; };
 		91E2D6AE29562E0800027F90 /* PointsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsCollectionViewCell.xib; sourceTree = "<group>"; };
+		AB8ABF6BA50ED44CC7E2502F /* Pods_SobeDesce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SobeDesce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B14436411AC06D47D8AF7518 /* Pods-SobeDesce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SobeDesce.debug.xcconfig"; path = "Target Support Files/Pods-SobeDesce/Pods-SobeDesce.debug.xcconfig"; sourceTree = "<group>"; };
 		CE6561062A73C16E009393FA /* myColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myColors.swift; sourceTree = "<group>"; };
 		CE6561082A75ADAD009393FA /* Trunfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trunfos.swift; sourceTree = "<group>"; };
 		CE8739282A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSavedGameTableViewCell.swift; sourceTree = "<group>"; };
@@ -68,6 +73,7 @@
 		CE89C6302A694DEF0000C5BB /* SaveGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGameCell.swift; sourceTree = "<group>"; };
 		CE89C6312A694DEF0000C5BB /* SaveGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveGameCell.xib; sourceTree = "<group>"; };
 		CE89C6342A69D18F0000C5BB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		CEA6498F2A82BAC20025C5F8 /* animation_ll2lyl9k.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation_ll2lyl9k.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				758F149307E176AEE2C3A5A2 /* Pods_SobeDesce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +93,8 @@
 			children = (
 				911AF7EB2953C66300EFF2B6 /* SobeDesce */,
 				911AF7EA2953C66300EFF2B6 /* Products */,
+				EF6AEFEB1960A9980C4A436A /* Pods */,
+				B6265DECC4C31CCFBA6BC398 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +126,7 @@
 		91E2D6AC29562DD000027F90 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				CEA6498F2A82BAC20025C5F8 /* animation_ll2lyl9k.json */,
 				CE479E6A2A70530700CE26D9 /* ssavedGame */,
 				9124B0AF2968C00C00BA4AEE /* PlayerScoreField.xib */,
 				9124B0AD2968BF7E00BA4AEE /* PlayerScoreField.swift */,
@@ -128,6 +138,14 @@
 				910654512970AF7700CB6B70 /* CostTableViewCell.xib */,
 			);
 			path = cells;
+			sourceTree = "<group>";
+		};
+		B6265DECC4C31CCFBA6BC398 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB8ABF6BA50ED44CC7E2502F /* Pods_SobeDesce.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CE479E682A7051BD00CE26D9 /* views */ = {
@@ -165,6 +183,15 @@
 			path = ssavedGame;
 			sourceTree = "<group>";
 		};
+		EF6AEFEB1960A9980C4A436A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B14436411AC06D47D8AF7518 /* Pods-SobeDesce.debug.xcconfig */,
+				27B3D91ECFC19EE83A58994B /* Pods-SobeDesce.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 911AF8002953C66500EFF2B6 /* Build configuration list for PBXNativeTarget "SobeDesce" */;
 			buildPhases = (
+				1F83F4E0F454D16C210F0B98 /* [CP] Check Pods Manifest.lock */,
 				911AF7E52953C66300EFF2B6 /* Sources */,
 				911AF7E62953C66300EFF2B6 /* Frameworks */,
 				911AF7E72953C66300EFF2B6 /* Resources */,
+				F3445D6778DBD8D0D492841B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,12 +260,55 @@
 				9124B0B02968C00C00BA4AEE /* PlayerScoreField.xib in Resources */,
 				CE87392B2A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.xib in Resources */,
 				911AF7FC2953C66500EFF2B6 /* LaunchScreen.storyboard in Resources */,
+				CEA649902A82BAC20025C5F8 /* animation_ll2lyl9k.json in Resources */,
 				911AF7F92953C66500EFF2B6 /* Assets.xcassets in Resources */,
 				911AF7F42953C66300EFF2B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F83F4E0F454D16C210F0B98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SobeDesce-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3445D6778DBD8D0D492841B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SobeDesce/Pods-SobeDesce-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SobeDesce/Pods-SobeDesce-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SobeDesce/Pods-SobeDesce-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		911AF7E52953C66300EFF2B6 /* Sources */ = {
@@ -402,6 +474,7 @@
 		};
 		911AF8012953C66500EFF2B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B14436411AC06D47D8AF7518 /* Pods-SobeDesce.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -414,8 +487,6 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -432,6 +503,7 @@
 		};
 		911AF8022953C66500EFF2B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27B3D91ECFC19EE83A58994B /* Pods-SobeDesce.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -444,8 +516,6 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

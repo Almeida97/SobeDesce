@@ -35,7 +35,7 @@ struct CoreDataManager {
         }
         return players
     }
-    func createGame(withName gameName: String, players: [Player], dateCreated: String) -> Game? {
+    func createGame(withName gameName: String, players: [Player], dateCreated: String) {
         let context = persistentContainer.viewContext
         let game = NSEntityDescription.insertNewObject(forEntityName: "Game", into: context) as! Game
         game.name = gameName
@@ -52,12 +52,11 @@ struct CoreDataManager {
         
         do {
             try context.save()
-            return game
+            return
         } catch let createError {
             print("Failed to create: \(createError)")
         }
-        
-        return nil
+        return
     }
     
     func fetchAllGames() -> [Game]? {
