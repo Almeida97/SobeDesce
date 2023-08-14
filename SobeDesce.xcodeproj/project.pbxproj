@@ -35,6 +35,7 @@
 		CE89C6322A694DEF0000C5BB /* SaveGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89C6302A694DEF0000C5BB /* SaveGameCell.swift */; };
 		CE89C6332A694DEF0000C5BB /* SaveGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE89C6312A694DEF0000C5BB /* SaveGameCell.xib */; };
 		CE89C6352A69D18F0000C5BB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89C6342A69D18F0000C5BB /* CoreDataManager.swift */; };
+		CEB0BA9C2A8A55DB00864DCA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CEB0BA9B2A8A55DB00864DCA /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		CE89C6302A694DEF0000C5BB /* SaveGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGameCell.swift; sourceTree = "<group>"; };
 		CE89C6312A694DEF0000C5BB /* SaveGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveGameCell.xib; sourceTree = "<group>"; };
 		CE89C6342A69D18F0000C5BB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		CEB0BA9B2A8A55DB00864DCA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		911AF7EB2953C66300EFF2B6 /* SobeDesce */ = {
 			isa = PBXGroup;
 			children = (
+				CEB0BA9A2A8A55C900864DCA /* Git */,
 				CE479E692A7051E300CE26D9 /* Models */,
 				CE479E682A7051BD00CE26D9 /* views */,
 				91E2D6AC29562DD000027F90 /* cells */,
@@ -165,6 +168,14 @@
 			path = ssavedGame;
 			sourceTree = "<group>";
 		};
+		CEB0BA9A2A8A55C900864DCA /* Git */ = {
+			isa = PBXGroup;
+			children = (
+				CEB0BA9B2A8A55DB00864DCA /* .gitignore */,
+			);
+			path = Git;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,6 +238,7 @@
 				91993A17295E38FF00EAC59B /* icons8-skull-heart-96.png in Resources */,
 				CE89C6332A694DEF0000C5BB /* SaveGameCell.xib in Resources */,
 				910654532970AF7700CB6B70 /* CostTableViewCell.xib in Resources */,
+				CEB0BA9C2A8A55DB00864DCA /* .gitignore in Resources */,
 				91E2D6B029562E0800027F90 /* PointsCollectionViewCell.xib in Resources */,
 				9124B0B02968C00C00BA4AEE /* PlayerScoreField.xib in Resources */,
 				CE87392B2A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.xib in Resources */,
