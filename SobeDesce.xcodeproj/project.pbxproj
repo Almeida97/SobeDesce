@@ -111,6 +111,7 @@
 		911AF7EB2953C66300EFF2B6 /* SobeDesce */ = {
 			isa = PBXGroup;
 			children = (
+				CEEAFAAC2A8A53AC0097E0A0 /* Git */,
 				CE479E692A7051E300CE26D9 /* Models */,
 				CE479E682A7051BD00CE26D9 /* views */,
 				91E2D6AC29562DD000027F90 /* cells */,
@@ -121,7 +122,6 @@
 				911AF7FA2953C66500EFF2B6 /* LaunchScreen.storyboard */,
 				911AF7FD2953C66500EFF2B6 /* Info.plist */,
 				91993A16295E38FF00EAC59B /* icons8-skull-heart-96.png */,
-				CEEAFAAA2A8A53100097E0A0 /* .gitignore */,
 			);
 			path = SobeDesce;
 			sourceTree = "<group>";
@@ -184,6 +184,14 @@
 				CE89C6312A694DEF0000C5BB /* SaveGameCell.xib */,
 			);
 			path = ssavedGame;
+			sourceTree = "<group>";
+		};
+		CEEAFAAC2A8A53AC0097E0A0 /* Git */ = {
+			isa = PBXGroup;
+			children = (
+				CEEAFAAA2A8A53100097E0A0 /* .gitignore */,
+			);
+			path = Git;
 			sourceTree = "<group>";
 		};
 		EF6AEFEB1960A9980C4A436A /* Pods */ = {
