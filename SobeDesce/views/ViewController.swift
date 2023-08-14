@@ -33,8 +33,16 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        scoreTableView.reloadData()
+ 
+        //scoreTableView.reloadData()
     }
+//    func returnARound(){
+//        for player in players.count {
+//            players[player].totalPoints.removeLast()
+//            players[player].rounds.removeLast()
+//        }
+//    }
+    
     func sendDataToFirstViewController(roundScoreArray: [String],trunfo: Trunfos) {
         var num = 0
         for round in roundScoreArray {

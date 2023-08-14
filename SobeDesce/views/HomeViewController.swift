@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var recentLabel: UIButton!
     @IBOutlet weak var textfieldStack: UIStackView!
     @IBOutlet weak var addPlayerBtn: UIButton!
     @IBOutlet weak var removePlayerBtn: UIButton!
@@ -18,6 +19,10 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        recentLabel.layer.borderWidth = 2
+        recentLabel.layer.borderColor = UIColor.secondarySystemBackground.cgColor
+        recentLabel.layer.cornerRadius = 10
+        
         self.setupToHideKeyboardOnTapView()
         addFields()
     }
