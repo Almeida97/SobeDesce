@@ -34,21 +34,21 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
     }
     
     func configureBackButton() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrowshape.turn.up.left.fill"), style: .done, target: self, action: #selector(returnARound))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrowshape.turn.up.left.fill"), style: .done, target: self, action: #selector(undoRound))
         self.navigationItem.rightBarButtonItem?.tintColor = .systemRed
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
- 
-        //scoreTableView.reloadData()
-    }
-    
-    @objc func returnARound(){
+    @objc func undoRound(){
         for i in 0 ..< players.count {
-            players[i].totalPoints.removeLast()
-            players[i].rounds.removeLast()
+            if players[i].rounds.count <= 1 {
+                return
+            }else{
+                players[i].totalPoints.removeLast()
+                players[i].rounds.removeLast()
+            }
         }
+        CoreDataManager.shared.updatePlayerData(from: self.gameName, players: self.players)
         scoreTableView.reloadData()
     }
     

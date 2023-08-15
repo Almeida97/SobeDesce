@@ -404,7 +404,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LKi-wz-kTv">
-                                <rect key="frame" x="10" y="149" width="394" height="703"/>
+                                <rect key="frame" x="5" y="149" width="404" height="703"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -412,8 +412,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LKi-wz-kTv" firstAttribute="top" secondItem="fXd-lE-2B6" secondAttribute="top" constant="5" id="BHk-Nm-7da"/>
-                            <constraint firstItem="LKi-wz-kTv" firstAttribute="leading" secondItem="fXd-lE-2B6" secondAttribute="leading" constant="10" id="aFb-BE-cWs"/>
-                            <constraint firstItem="fXd-lE-2B6" firstAttribute="trailing" secondItem="LKi-wz-kTv" secondAttribute="trailing" constant="10" id="oiU-rm-TRn"/>
+                            <constraint firstItem="LKi-wz-kTv" firstAttribute="leading" secondItem="fXd-lE-2B6" secondAttribute="leading" constant="5" id="aFb-BE-cWs"/>
+                            <constraint firstItem="fXd-lE-2B6" firstAttribute="trailing" secondItem="LKi-wz-kTv" secondAttribute="trailing" constant="5" id="oiU-rm-TRn"/>
                             <constraint firstItem="fXd-lE-2B6" firstAttribute="bottom" secondItem="LKi-wz-kTv" secondAttribute="bottom" constant="10" id="uGn-rh-f41"/>
                         </constraints>
                     </view>
