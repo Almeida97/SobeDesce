@@ -260,7 +260,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qRX-4J-v0S">
-                                <rect key="frame" x="88.5" y="112" width="237" height="150"/>
+                                <rect key="frame" x="88.5" y="164" width="237" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kem-Az-eDG" userLabel="titleView">
                                         <rect key="frame" x="0.0" y="0.0" width="237" height="70"/>
@@ -315,7 +315,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gZ6-2k-uhz">
-                                <rect key="frame" x="30" y="282" width="354" height="455"/>
+                                <rect key="frame" x="30" y="334" width="354" height="403"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZF-bI-oJs">
                                 <rect key="frame" x="30" y="802" width="354" height="30"/>
@@ -404,34 +404,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LKi-wz-kTv">
-                                <rect key="frame" x="10" y="154" width="220" height="698"/>
+                                <rect key="frame" x="10" y="149" width="394" height="703"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Games" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNP-en-3jc">
-                                <rect key="frame" x="5" y="102" width="230" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="210" id="hwv-s7-Kcs"/>
-                                    <constraint firstAttribute="height" constant="37" id="mkP-SN-91V"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fXd-lE-2B6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fXd-lE-2B6" firstAttribute="trailing" secondItem="aNP-en-3jc" secondAttribute="trailing" constant="5" id="10L-9I-57a"/>
-                            <constraint firstItem="LKi-wz-kTv" firstAttribute="top" secondItem="aNP-en-3jc" secondAttribute="bottom" constant="15" id="3kh-Uz-9sG"/>
+                            <constraint firstItem="LKi-wz-kTv" firstAttribute="top" secondItem="fXd-lE-2B6" secondAttribute="top" constant="5" id="BHk-Nm-7da"/>
                             <constraint firstItem="LKi-wz-kTv" firstAttribute="leading" secondItem="fXd-lE-2B6" secondAttribute="leading" constant="10" id="aFb-BE-cWs"/>
-                            <constraint firstItem="aNP-en-3jc" firstAttribute="top" secondItem="fXd-lE-2B6" secondAttribute="top" constant="10" id="iby-KU-wKN"/>
                             <constraint firstItem="fXd-lE-2B6" firstAttribute="trailing" secondItem="LKi-wz-kTv" secondAttribute="trailing" constant="10" id="oiU-rm-TRn"/>
-                            <constraint firstItem="aNP-en-3jc" firstAttribute="leading" secondItem="fXd-lE-2B6" secondAttribute="leading" constant="5" id="pqE-rd-Lcv"/>
                             <constraint firstItem="fXd-lE-2B6" firstAttribute="bottom" secondItem="LKi-wz-kTv" secondAttribute="bottom" constant="10" id="uGn-rh-f41"/>
-                            <constraint firstItem="aNP-en-3jc" firstAttribute="centerX" secondItem="jIQ-hT-Pzx" secondAttribute="centerX" id="ugZ-Ak-8Nm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qzV-Ye-s1e"/>
+                    <navigationItem key="navigationItem" title="Recent Games" largeTitleDisplayMode="always" id="qzV-Ye-s1e"/>
                     <connections>
                         <outlet property="recentGamesTable" destination="LKi-wz-kTv" id="dsr-TN-MGb"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="openSavedGame" id="7I9-8g-LAG"/>
@@ -446,9 +432,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RL9-tp-hjl" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7qa-jf-U5H">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="7qa-jf-U5H">
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="labelColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

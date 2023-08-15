@@ -18,6 +18,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     var tag = 1
     
     override func viewDidLoad() {
+        self.title = nil
         super.viewDidLoad()
         recentLabel.layer.borderWidth = 2
         recentLabel.layer.borderColor = UIColor.secondarySystemBackground.cgColor
@@ -26,8 +27,14 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         self.setupToHideKeyboardOnTapView()
         addFields()
     }
-    
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
+
+    }
     override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = false
         players = []
         removePlayerBtn.isHidden = true
         startGameBtn.isEnabled = false
