@@ -26,9 +26,16 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureBackButton()
         scoreTableView.delegate = self
         scoreTableView.dataSource = self
         scoreTableView.register(UINib(nibName: "PointsCell", bundle: nil), forCellReuseIdentifier: "cell")
+        
+    }
+    
+    func configureBackButton() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrowshape.turn.up.left.fill"), style: .done, target: self, action: #selector(returnARound))
+        self.navigationItem.rightBarButtonItem?.tintColor = .systemRed
         
     }
     
@@ -36,12 +43,14 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
  
         //scoreTableView.reloadData()
     }
-//    func returnARound(){
-//        for player in players.count {
-//            players[player].totalPoints.removeLast()
-//            players[player].rounds.removeLast()
-//        }
-//    }
+    
+    @objc func returnARound(){
+        for i in 0 ..< players.count {
+            players[i].totalPoints.removeLast()
+            players[i].rounds.removeLast()
+        }
+        scoreTableView.reloadData()
+    }
     
     func sendDataToFirstViewController(roundScoreArray: [String],trunfo: Trunfos) {
         var num = 0
