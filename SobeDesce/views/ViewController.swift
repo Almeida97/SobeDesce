@@ -42,7 +42,19 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
     @objc func undoRound(){
         for i in 0 ..< players.count {
             if players[i].rounds.count <= 1 {
-                return
+                let alert = UIAlertController(title: "Not possible to undo",
+                                              message: "You are not able to undo the first round",
+                                              preferredStyle: .alert)
+
+                // 2. Creeate Actions
+                alert.addAction(UIAlertAction(title: "OK",
+                                              style: .default,
+                                              handler: { _ in
+                        return
+                }))
+
+                // 3. Snow
+                present(alert, animated: true, completion: nil)
             }else{
                 players[i].totalPoints.removeLast()
                 players[i].rounds.removeLast()

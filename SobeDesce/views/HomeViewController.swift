@@ -18,7 +18,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     var tag = 1
     
     override func viewDidLoad() {
-        self.title = nil
         super.viewDidLoad()
         recentLabel.layer.borderWidth = 2
         recentLabel.layer.borderColor = UIColor.secondarySystemBackground.cgColor
