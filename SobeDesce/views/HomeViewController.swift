@@ -19,6 +19,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureRecentButton()
         recentLabel.layer.borderWidth = 2
         recentLabel.layer.borderColor = UIColor.secondarySystemBackground.cgColor
         recentLabel.layer.cornerRadius = 10
@@ -27,6 +28,15 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         addFields()
     }
 
+    func configureRecentButton() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "clock.arrow.circlepath"), style: .done, target: self, action: #selector(navigateToRecentVC))
+        self.navigationItem.rightBarButtonItem?.tintColor = .label
+        
+    }
+    
+    @objc func navigateToRecentVC(){
+        self.performSegue(withIdentifier: "showRecentSegue", sender: self)
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.prefersLargeTitles = true
