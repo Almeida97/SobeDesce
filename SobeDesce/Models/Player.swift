@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct Player {
+struct Player: Codable {
     var name: String
     var rounds: [String] = [" "]
     var totalPoints: [Int] = [25]

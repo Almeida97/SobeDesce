@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		758F149307E176AEE2C3A5A2 /* Pods_SobeDesce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8ABF6BA50ED44CC7E2502F /* Pods_SobeDesce.framework */; };
 		910654522970AF7700CB6B70 /* CostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910654502970AF7700CB6B70 /* CostTableViewCell.swift */; };
 		910654532970AF7700CB6B70 /* CostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 910654512970AF7700CB6B70 /* CostTableViewCell.xib */; };
 		911AF7ED2953C66300EFF2B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911AF7EC2953C66300EFF2B6 /* AppDelegate.swift */; };
@@ -28,8 +27,15 @@
 		91993A19295F619100EAC59B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91993A18295F619100EAC59B /* HomeViewController.swift */; };
 		91E2D6AF29562E0800027F90 /* PointsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E2D6AD29562E0800027F90 /* PointsCollectionViewCell.swift */; };
 		91E2D6B029562E0800027F90 /* PointsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E2D6AE29562E0800027F90 /* PointsCollectionViewCell.xib */; };
+		CD41154A1226411C74FE5BD4 /* Pods_SobeDesce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0205FFC1B5EE37D3B6D0A3E5 /* Pods_SobeDesce.framework */; };
+		CE21ED952B66799700C8E7C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE21ED942B66799700C8E7C3 /* GoogleService-Info.plist */; };
+		CE21ED972B66D86900C8E7C3 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21ED962B66D86900C8E7C3 /* AuthService.swift */; };
+		CE21ED9B2B67E48600C8E7C3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21ED9A2B67E48600C8E7C3 /* ProfileViewController.swift */; };
+		CE21ED9D2B67E4BD00C8E7C3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21ED9C2B67E4BD00C8E7C3 /* SignInViewController.swift */; };
 		CE6561072A73C16E009393FA /* myColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6561062A73C16E009393FA /* myColors.swift */; };
 		CE6561092A75ADAD009393FA /* Trunfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6561082A75ADAD009393FA /* Trunfos.swift */; };
+		CE7ACC152B692C46005C8F06 /* customButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7ACC142B692C46005C8F06 /* customButtonExtension.swift */; };
+		CE7ACC172B69436B005C8F06 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7ACC162B69436B005C8F06 /* SignUpViewController.swift */; };
 		CE87392A2A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8739282A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.swift */; };
 		CE87392B2A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8739292A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.xib */; };
 		CE89C62F2A6940CE0000C5BB /* SavedGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89C62E2A6940CE0000C5BB /* SavedGamesViewController.swift */; };
@@ -38,10 +44,15 @@
 		CE89C6352A69D18F0000C5BB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89C6342A69D18F0000C5BB /* CoreDataManager.swift */; };
 		CEA649902A82BAC20025C5F8 /* animation_ll2lyl9k.json in Resources */ = {isa = PBXBuildFile; fileRef = CEA6498F2A82BAC20025C5F8 /* animation_ll2lyl9k.json */; };
 		CEB0BA9F2A8A562F00864DCA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CEB0BA9E2A8A562F00864DCA /* .gitignore */; };
+		CED36F322B73E01F00BD5938 /* UserGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED36F312B73E01F00BD5938 /* UserGame.swift */; };
+		CEEDE1802B6BDC47004C4543 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE17F2B6BDC47004C4543 /* Validator.swift */; };
+		CEEDE1822B6C45ED004C4543 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE1812B6C45ED004C4543 /* ForgotPasswordViewController.swift */; };
+		CEEDE1842B6C4B7A004C4543 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE1832B6C4B7A004C4543 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		27B3D91ECFC19EE83A58994B /* Pods-SobeDesce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SobeDesce.release.xcconfig"; path = "Target Support Files/Pods-SobeDesce/Pods-SobeDesce.release.xcconfig"; sourceTree = "<group>"; };
+		0205FFC1B5EE37D3B6D0A3E5 /* Pods_SobeDesce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SobeDesce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50F25FF7A5C91BEBCEDD2D91 /* Pods-SobeDesce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SobeDesce.release.xcconfig"; path = "Target Support Files/Pods-SobeDesce/Pods-SobeDesce.release.xcconfig"; sourceTree = "<group>"; };
 		910654502970AF7700CB6B70 /* CostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostTableViewCell.swift; sourceTree = "<group>"; };
 		910654512970AF7700CB6B70 /* CostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CostTableViewCell.xib; sourceTree = "<group>"; };
 		911AF7E92953C66300EFF2B6 /* SobeDesce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SobeDesce.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,10 +75,15 @@
 		91993A18295F619100EAC59B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		91E2D6AD29562E0800027F90 /* PointsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsCollectionViewCell.swift; sourceTree = "<group>"; };
 		91E2D6AE29562E0800027F90 /* PointsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsCollectionViewCell.xib; sourceTree = "<group>"; };
-		AB8ABF6BA50ED44CC7E2502F /* Pods_SobeDesce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SobeDesce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B14436411AC06D47D8AF7518 /* Pods-SobeDesce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SobeDesce.debug.xcconfig"; path = "Target Support Files/Pods-SobeDesce/Pods-SobeDesce.debug.xcconfig"; sourceTree = "<group>"; };
+		AEAC2580F6A530B4DAF17EF3 /* Pods-SobeDesce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SobeDesce.debug.xcconfig"; path = "Target Support Files/Pods-SobeDesce/Pods-SobeDesce.debug.xcconfig"; sourceTree = "<group>"; };
+		CE21ED942B66799700C8E7C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE21ED962B66D86900C8E7C3 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		CE21ED9A2B67E48600C8E7C3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CE21ED9C2B67E4BD00C8E7C3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CE6561062A73C16E009393FA /* myColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myColors.swift; sourceTree = "<group>"; };
 		CE6561082A75ADAD009393FA /* Trunfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trunfos.swift; sourceTree = "<group>"; };
+		CE7ACC142B692C46005C8F06 /* customButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customButtonExtension.swift; sourceTree = "<group>"; };
+		CE7ACC162B69436B005C8F06 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CE8739282A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSavedGameTableViewCell.swift; sourceTree = "<group>"; };
 		CE8739292A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerSavedGameTableViewCell.xib; sourceTree = "<group>"; };
 		CE89C62E2A6940CE0000C5BB /* SavedGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedGamesViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +92,10 @@
 		CE89C6342A69D18F0000C5BB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		CEA6498F2A82BAC20025C5F8 /* animation_ll2lyl9k.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation_ll2lyl9k.json; sourceTree = "<group>"; };
 		CEB0BA9E2A8A562F00864DCA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		CED36F312B73E01F00BD5938 /* UserGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGame.swift; sourceTree = "<group>"; };
+		CEEDE17F2B6BDC47004C4543 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		CEEDE1812B6C45ED004C4543 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		CEEDE1832B6C4B7A004C4543 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,20 +103,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				758F149307E176AEE2C3A5A2 /* Pods_SobeDesce.framework in Frameworks */,
+				CD41154A1226411C74FE5BD4 /* Pods_SobeDesce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09A5E11339C424ABF7586FD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0205FFC1B5EE37D3B6D0A3E5 /* Pods_SobeDesce.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		911AF7E02953C66300EFF2B6 = {
 			isa = PBXGroup;
 			children = (
 				911AF7EB2953C66300EFF2B6 /* SobeDesce */,
 				911AF7EA2953C66300EFF2B6 /* Products */,
 				EF6AEFEB1960A9980C4A436A /* Pods */,
-				B6265DECC4C31CCFBA6BC398 /* Frameworks */,
+				09A5E11339C424ABF7586FD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,7 +139,7 @@
 		911AF7EB2953C66300EFF2B6 /* SobeDesce */ = {
 			isa = PBXGroup;
 			children = (
-				CEB0BA9D2A8A561F00864DCA /* Git */,
+				CE7ACC132B692C0D005C8F06 /* Support */,
 				CE479E692A7051E300CE26D9 /* Models */,
 				CE479E682A7051BD00CE26D9 /* views */,
 				91E2D6AC29562DD000027F90 /* cells */,
@@ -122,6 +150,7 @@
 				911AF7FA2953C66500EFF2B6 /* LaunchScreen.storyboard */,
 				911AF7FD2953C66500EFF2B6 /* Info.plist */,
 				91993A16295E38FF00EAC59B /* icons8-skull-heart-96.png */,
+				CEB0BA9D2A8A561F00864DCA /* Git */,
 			);
 			path = SobeDesce;
 			sourceTree = "<group>";
@@ -143,22 +172,16 @@
 			path = cells;
 			sourceTree = "<group>";
 		};
-		B6265DECC4C31CCFBA6BC398 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AB8ABF6BA50ED44CC7E2502F /* Pods_SobeDesce.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CE479E682A7051BD00CE26D9 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				CE4F70B12B75138C00CB9FFF /* AuthViews */,
 				911AF7F02953C66300EFF2B6 /* ViewController.swift */,
 				91993A14295E234400EAC59B /* ScoreViewController.swift */,
 				91993A18295F619100EAC59B /* HomeViewController.swift */,
 				9124B0A929645D3E00BA4AEE /* WinnerViewController.swift */,
 				CE89C62E2A6940CE0000C5BB /* SavedGamesViewController.swift */,
+				CE21ED9A2B67E48600C8E7C3 /* ProfileViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -166,11 +189,16 @@
 		CE479E692A7051E300CE26D9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE21ED942B66799700C8E7C3 /* GoogleService-Info.plist */,
 				911AF7F52953C66300EFF2B6 /* SobeDesce.xcdatamodeld */,
 				9124B0AB2964F04200BA4AEE /* Player.swift */,
 				CE89C6342A69D18F0000C5BB /* CoreDataManager.swift */,
 				CE6561062A73C16E009393FA /* myColors.swift */,
 				CE6561082A75ADAD009393FA /* Trunfos.swift */,
+				CE21ED962B66D86900C8E7C3 /* AuthService.swift */,
+				CEEDE17F2B6BDC47004C4543 /* Validator.swift */,
+				CEEDE1832B6C4B7A004C4543 /* User.swift */,
+				CED36F312B73E01F00BD5938 /* UserGame.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,6 +214,24 @@
 			path = ssavedGame;
 			sourceTree = "<group>";
 		};
+		CE4F70B12B75138C00CB9FFF /* AuthViews */ = {
+			isa = PBXGroup;
+			children = (
+				CE21ED9C2B67E4BD00C8E7C3 /* SignInViewController.swift */,
+				CE7ACC162B69436B005C8F06 /* SignUpViewController.swift */,
+				CEEDE1812B6C45ED004C4543 /* ForgotPasswordViewController.swift */,
+			);
+			path = AuthViews;
+			sourceTree = "<group>";
+		};
+		CE7ACC132B692C0D005C8F06 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				CE7ACC142B692C46005C8F06 /* customButtonExtension.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		CEB0BA9D2A8A561F00864DCA /* Git */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,8 +243,8 @@
 		EF6AEFEB1960A9980C4A436A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B14436411AC06D47D8AF7518 /* Pods-SobeDesce.debug.xcconfig */,
-				27B3D91ECFC19EE83A58994B /* Pods-SobeDesce.release.xcconfig */,
+				AEAC2580F6A530B4DAF17EF3 /* Pods-SobeDesce.debug.xcconfig */,
+				50F25FF7A5C91BEBCEDD2D91 /* Pods-SobeDesce.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -210,11 +256,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 911AF8002953C66500EFF2B6 /* Build configuration list for PBXNativeTarget "SobeDesce" */;
 			buildPhases = (
-				1F83F4E0F454D16C210F0B98 /* [CP] Check Pods Manifest.lock */,
+				29D376F4B46BF607C1162549 /* [CP] Check Pods Manifest.lock */,
 				911AF7E52953C66300EFF2B6 /* Sources */,
 				911AF7E62953C66300EFF2B6 /* Frameworks */,
 				911AF7E72953C66300EFF2B6 /* Resources */,
-				F3445D6778DBD8D0D492841B /* [CP] Embed Pods Frameworks */,
+				3883F5849247C76AFC84D542 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE21ED952B66799700C8E7C3 /* GoogleService-Info.plist in Resources */,
 				911AF8062953CD6400EFF2B6 /* PointsCell.xib in Resources */,
 				91993A17295E38FF00EAC59B /* icons8-skull-heart-96.png in Resources */,
 				CE89C6332A694DEF0000C5BB /* SaveGameCell.xib in Resources */,
@@ -281,7 +328,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1F83F4E0F454D16C210F0B98 /* [CP] Check Pods Manifest.lock */ = {
+		29D376F4B46BF607C1162549 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -303,7 +350,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F3445D6778DBD8D0D492841B /* [CP] Embed Pods Frameworks */ = {
+		3883F5849247C76AFC84D542 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,22 +374,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE21ED9D2B67E4BD00C8E7C3 /* SignInViewController.swift in Sources */,
 				91993A15295E234400EAC59B /* ScoreViewController.swift in Sources */,
 				CE6561072A73C16E009393FA /* myColors.swift in Sources */,
 				911AF7F12953C66300EFF2B6 /* ViewController.swift in Sources */,
 				CE87392A2A6EC3FD00EA937D /* PlayerSavedGameTableViewCell.swift in Sources */,
 				9124B0AA29645D3E00BA4AEE /* WinnerViewController.swift in Sources */,
 				CE6561092A75ADAD009393FA /* Trunfos.swift in Sources */,
+				CE21ED972B66D86900C8E7C3 /* AuthService.swift in Sources */,
 				CE89C6352A69D18F0000C5BB /* CoreDataManager.swift in Sources */,
 				911AF7ED2953C66300EFF2B6 /* AppDelegate.swift in Sources */,
+				CED36F322B73E01F00BD5938 /* UserGame.swift in Sources */,
 				91993A19295F619100EAC59B /* HomeViewController.swift in Sources */,
+				CEEDE1822B6C45ED004C4543 /* ForgotPasswordViewController.swift in Sources */,
 				911AF7EF2953C66300EFF2B6 /* SceneDelegate.swift in Sources */,
 				CE89C6322A694DEF0000C5BB /* SaveGameCell.swift in Sources */,
 				910654522970AF7700CB6B70 /* CostTableViewCell.swift in Sources */,
 				91E2D6AF29562E0800027F90 /* PointsCollectionViewCell.swift in Sources */,
 				9124B0AE2968BF7E00BA4AEE /* PlayerScoreField.swift in Sources */,
+				CEEDE1802B6BDC47004C4543 /* Validator.swift in Sources */,
 				CE89C62F2A6940CE0000C5BB /* SavedGamesViewController.swift in Sources */,
+				CE7ACC172B69436B005C8F06 /* SignUpViewController.swift in Sources */,
 				911AF8052953CD6400EFF2B6 /* PointsCell.swift in Sources */,
+				CE21ED9B2B67E48600C8E7C3 /* ProfileViewController.swift in Sources */,
+				CEEDE1842B6C4B7A004C4543 /* User.swift in Sources */,
+				CE7ACC152B692C46005C8F06 /* customButtonExtension.swift in Sources */,
 				9124B0AC2964F04200BA4AEE /* Player.swift in Sources */,
 				911AF7F72953C66300EFF2B6 /* SobeDesce.xcdatamodeld in Sources */,
 			);
@@ -486,7 +542,7 @@
 		};
 		911AF8012953C66500EFF2B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B14436411AC06D47D8AF7518 /* Pods-SobeDesce.debug.xcconfig */;
+			baseConfigurationReference = AEAC2580F6A530B4DAF17EF3 /* Pods-SobeDesce.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -515,7 +571,7 @@
 		};
 		911AF8022953C66500EFF2B6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27B3D91ECFC19EE83A58994B /* Pods-SobeDesce.release.xcconfig */;
+			baseConfigurationReference = 50F25FF7A5C91BEBCEDD2D91 /* Pods-SobeDesce.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

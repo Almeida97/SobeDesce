@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Lottie
+import FirebaseAuth
 
 class WinnerViewController: UIViewController {
 
@@ -16,7 +16,6 @@ class WinnerViewController: UIViewController {
     @IBOutlet weak var backgroundView: UIView!
     var players: [Player] = []
     var gameName: String = ""
-    let animationView = LottieAnimationView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,22 +30,27 @@ class WinnerViewController: UIViewController {
         if let winner = players.firstIndex(where: { $0.totalPoints.last! <= 0 }) {
             let winnerPlayer = players.remove(at: winner)
             winnerLabel.text =  "Winner is \(winnerPlayer.name)"
-
+            if winnerPlayer.name == Auth.auth().currentUser?.email {
+                var amountWon = 0.00
+                for player in players {
+                    amountWon +=
+                    Double(player.totalPoints.last!) * 0.05
+                }
+                AuthService.shared.updateUserWinning(winner: true, winning: amountWon) { [weak self] error in
+                    guard let self = self else { return }
+                }
+            } else {
+                let usersName = Auth.auth().currentUser?.email
+                let user = players.firstIndex(where: {$0.name == usersName})!
+                let userPlayer = players[user]
+                AuthService.shared.updateUserWinning(winner: false, winning: Double(userPlayer.totalPoints.last!) * 0.05 ) { [weak self] error in
+                    guard let self = self else { return }
+                }
+            }
+            // check if the name is the same as currenteUser and if so add the moneywon , if not find the players,firstindex where player name is the currente user and add the amount to pay to it
         }
-        playAnimation()
-        
     }
     
-    private func playAnimation() {
-        let animationView = LottieAnimationView(name: "animation_ll2lyl9k")
-        let winnerLabelFrame = winnerLabel.frame
-        animationView.frame = CGRect(x: winnerLabelFrame.maxX - 100, y: winnerLabelFrame.midY + 150, width: 150, height: 150)
-        animationView.contentMode = .scaleAspectFill
-        animationView.loopMode = .autoReverse
-        animationView.play()
-        view.addSubview(animationView)
-        
-    }
     
     @IBAction func newGameBtnPressed(_ sender: Any) {
         if let thisGame = CoreDataManager.shared.fetchGame(withName: gameName) {

@@ -20,8 +20,21 @@ class SavedGamesViewController: UIViewController {
         recentGamesTable.delegate = self
         recentGamesTable.dataSource = self
         recentGamesTable.register(UINib(nibName: "SaveGameCell", bundle: nil), forCellReuseIdentifier: "saveGameCell")
-        recentGames = CoreDataManager.shared.fetchAllGames()
-        recentGamesTable.reloadData()
+        //recentGames = CoreDataManager.shared.fetchAllGames()
+        //recentGamesTable.reloadData()
+        AuthService.shared.checkLoggedIn(completion: { loggedIn in
+            if loggedIn {
+                AuthService.shared.getPledgesInProgress { [weak self] games in
+                    guard let self = self else { return }
+                    self.recentGames = []
+                    self.recentGamesTable.reloadData()
+                }
+            } else {
+                self.recentGames = CoreDataManager.shared.fetchAllGames()
+                self.recentGamesTable.reloadData()
+            }
+        })
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -37,13 +50,13 @@ extension SavedGamesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recentGames?.count ?? 0
+        //if empty then no recentGames reorded and should show something for the user
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "saveGameCell", for: indexPath) as! SaveGameCell
         let game = recentGames![indexPath.row]
         cell.configureTableView(with: game)
         cell.playerListTableView.reloadData()
-        //transform date type to string to show on label
         cell.dateLabel.text = recentGames?[indexPath.row].gameDate
         return cell
     }

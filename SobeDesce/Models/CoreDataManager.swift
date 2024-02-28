@@ -35,6 +35,7 @@ struct CoreDataManager {
         }
         return players
     }
+    
     func createGame(withName gameName: String, players: [Player], dateCreated: String) {
         let context = persistentContainer.viewContext
         let game = NSEntityDescription.insertNewObject(forEntityName: "Game", into: context) as! Game

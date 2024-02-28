@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseCore
 
 class HomeViewController: UIViewController, UITextFieldDelegate {
 
@@ -20,10 +22,9 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureRecentButton()
-        recentLabel.layer.borderWidth = 2
-        recentLabel.layer.borderColor = UIColor.secondarySystemBackground.cgColor
-        recentLabel.layer.cornerRadius = 10
-        
+        AuthService.shared.checkLoggedIn { result in
+            if result { self.configureProfileButton() }
+        }
         self.setupToHideKeyboardOnTapView()
         addFields()
     }
@@ -31,17 +32,27 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     func configureRecentButton() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "clock.arrow.circlepath"), style: .done, target: self, action: #selector(navigateToRecentVC))
         self.navigationItem.rightBarButtonItem?.tintColor = .label
-        
+
+    }
+    
+    func configureProfileButton() {
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle"), style: .done, target: self, action: #selector(navigateToProfileVC))
     }
     
     @objc func navigateToRecentVC(){
         self.performSegue(withIdentifier: "showRecentSegue", sender: self)
     }
+    
+    @objc func navigateToProfileVC(){
+        self.performSegue(withIdentifier: "showProfileVC", sender: self)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.prefersLargeTitles = true
-
+     
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.prefersLargeTitles = false
         players = []
@@ -52,6 +63,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
             tf.text = ""
             
         }
+        
     }
     
     private func tagBasedTextField(_ textField: UITextField) {
@@ -72,18 +84,32 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     func addFields() {
         for _ in 0..<3 {
             addField(toView: self.textfieldStack, tag: tag)
+            if tag == 1 {
+                let tf = view.viewWithTag(tag) as! UITextField
+                tf.text = "lolool"
+            }
             tag+=1
+            
         }
       }
       
     func addField(toView view: UIStackView, tag: Int) {
+        
         let playerName =  UITextField()
         playerName.placeholder = "Player name"
         playerName.borderStyle = UITextField.BorderStyle.roundedRect
         playerName.delegate = self
         playerName.keyboardType = .default
         playerName.tag = tag
+        
         view.addArrangedSubview(playerName)
+        playerName.text = "random"
+        if tag == 1 {
+            if let userEmail = Auth.auth().currentUser?.email {
+                playerName.text = userEmail
+                
+            }
+        }
         playerName.addTarget(self, action: #selector(textFieldsIsNotEmpty),
                                        for: .editingChanged)
         let margins = view.layoutMarginsGuide
@@ -167,15 +193,23 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
        
     }
     
+    func getDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
+        let currentDate = dateFormatter.string(from: Date())
+        return currentDate
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         startGamePressed()
         if segue.identifier == "startGameSegue" {
             let gameScreen: ViewController = segue.destination as! ViewController
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
-            let currentDate = dateFormatter.string(from: Date())
+            let currentDate = getDate()
             let uuid = UUID().uuidString
             CoreDataManager.shared.createGame(withName: "\(uuid)", players: self.players, dateCreated: currentDate)
+            AuthService.shared.createUserGame(players: self.players) { error in
+                print(error)
+            }
             gameScreen.players = self.players
             gameScreen.gameName = uuid
         }

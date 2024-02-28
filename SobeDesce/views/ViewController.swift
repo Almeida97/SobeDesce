@@ -103,16 +103,7 @@ class ViewController: UIViewController, MyDataSendingDelegateProtocol {
             winnerVC.gameName = self.gameName
         }
     }
-    
-    func newGame() {
-        for i in 0 ..< players.count {
-            players[i].totalPoints = [25]
-            players[i].rounds = [" "]
-            players[i].cost = 0
-            players[i].winner = false
-        }
-    }
-    
+
     func checkScore()-> Bool {
         if let winner = players.firstIndex(where: { $0.totalPoints.last! <= 0 }) {
             players[winner].winner = true

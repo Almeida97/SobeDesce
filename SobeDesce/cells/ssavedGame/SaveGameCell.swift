@@ -23,6 +23,7 @@ class SaveGameCell: UITableViewCell {
         self.layer.cornerRadius = 8
         self.layer.masksToBounds = true
         playerListTableView.layer.cornerRadius = 8
+        playerListTableView.backgroundColor = .secondarySystemBackground
         playerListTableView.layer.masksToBounds = true
         playerListTableView.isUserInteractionEnabled = false;
         myBackgroundView.layer.cornerRadius = 8
